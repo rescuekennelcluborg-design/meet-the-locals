@@ -1,10 +1,9 @@
 import json
-
-# import the breed filter
 from breed_filter import is_bully_breed
 
-# import your first scraper
+# --- IMPORT SCRAPERS ---
 from scrapers.humane_society_western_mt import scrape_humane_society_western_mt
+from scrapers.humane_society_nw_mt import scrape_humane_society_nw_mt
 
 
 def main():
@@ -12,6 +11,7 @@ def main():
 
     # --- RUN SCRAPERS ---
     all_dogs.extend(scrape_humane_society_western_mt())
+    all_dogs.extend(scrape_humane_society_nw_mt())
 
     # --- FILTER FOR BULLY BREEDS ---
     filtered = [
@@ -28,3 +28,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
