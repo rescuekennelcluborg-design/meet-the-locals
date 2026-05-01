@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace; white-space: pre-wrap;">
+<div id="dog-list">Loading...</div>
+
+<script>
+fetch("https://rescuekennelcluborg-design.github.io/meet-the-locals/dogs.json")
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById("dog-list").innerText =
+      JSON.stringify(data, null, 2);
+  })
+  .catch(err => {
+    document.getElementById("dog-list").innerText =
+      "Error loading data: " + err;
+  });
+</script>
+</body>
+</html>
