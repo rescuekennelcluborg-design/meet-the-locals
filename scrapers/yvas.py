@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-YVAS_URL = "PASTE_ADOPTABLE_DOGS_URL_HERE"  # e.g. https://yvas.org/adoptable-dogs
+YVAS_URL = "https://yvas.org/adopt/dogs/"  # e.g. https://yvas.org/adoptable-dogs
 
 BULLY_KEYWORDS = ["pit", "bully", "stafford", "american bulldog", "american bull", "blockhead"]
 
